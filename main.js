@@ -1,4 +1,3 @@
-console.log("hi");
 let formEl = document.getElementById("weatherForm");
 let cardEl = document.getElementById("tempCard");
 
@@ -16,11 +15,11 @@ formEl.addEventListener("submit", (event) => {
 
 function displayCityWeather(data) {
   let weather = data;
-  console.log(data);
+
   let maxTemp = weather["main"]["temp_max"];
-  console.log(maxTemp);
+
   let minTemp = weather["main"]["temp_min"];
-  console.log(minTemp);
+
   let highTemp = Math.trunc(((maxTemp - 273.15) * 9) / 5 + 32);
   let lowTemp = Math.trunc(((minTemp - 273.15) * 9) / 5 + 32);
   let humidity = weather["main"]["humidity"];
